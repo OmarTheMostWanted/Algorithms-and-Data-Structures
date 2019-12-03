@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d9802fc-e817-44be-aefc-356a78042c2d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/CLList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/CLListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AIDS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AIDS.iml" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -22,11 +27,17 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1TnyD8mWeBOlLUBqo7oV1OuR29A" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="true" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -49,21 +60,9 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="JUnit.DLListTest">
-    <configuration name="DLList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.DLList" />
+  <component name="RunManager" selected="JUnit.CLListTest.rotateTest2">
+    <configuration name="CLList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.CLList" />
       <module name="AIDS" />
       <extension name="coverage">
         <pattern>
@@ -75,7 +74,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DLListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CLListTest.addLastTest3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AIDS" />
       <extension name="coverage">
         <pattern>
@@ -84,29 +83,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.DLListTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DLListTest.removeFromPosition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AIDS" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.DLListTest" />
-      <option name="METHOD_NAME" value="removeFromPosition" />
+      <option name="MAIN_CLASS_NAME" value="test.CLListTest" />
+      <option name="METHOD_NAME" value="addLastTest3" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DLListTest.reverse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CLListTest.rotateTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AIDS" />
       <extension name="coverage">
         <pattern>
@@ -115,14 +99,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.DLListTest" />
-      <option name="METHOD_NAME" value="reverse" />
+      <option name="MAIN_CLASS_NAME" value="test.CLListTest" />
+      <option name="METHOD_NAME" value="rotateTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DLListTest.testToString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CLListTest.rotateTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AIDS" />
       <extension name="coverage">
         <pattern>
@@ -131,8 +115,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.DLListTest" />
-      <option name="METHOD_NAME" value="testToString" />
+      <option name="MAIN_CLASS_NAME" value="test.CLListTest" />
+      <option name="METHOD_NAME" value="rotateTest1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CLListTest.rotateTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AIDS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.CLListTest" />
+      <option name="METHOD_NAME" value="rotateTest2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -140,13 +140,25 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DLListTest" />
-        <item itemvalue="JUnit.DLListTest.removeFromPosition" />
-        <item itemvalue="JUnit.DLListTest.testToString" />
-        <item itemvalue="JUnit.DLListTest.reverse" />
-        <item itemvalue="Application.DLList" />
+        <item itemvalue="JUnit.CLListTest.rotateTest2" />
+        <item itemvalue="Application.CLList" />
+        <item itemvalue="JUnit.CLListTest.rotateTest1" />
+        <item itemvalue="JUnit.CLListTest.rotateTest" />
+        <item itemvalue="JUnit.CLListTest.addLastTest3" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -162,6 +174,7 @@
       <workItem from="1574156638964" duration="4727000" />
       <workItem from="1574167484674" duration="670000" />
       <workItem from="1574612467470" duration="336000" />
+      <workItem from="1575403020327" duration="5465000" />
     </task>
     <servers />
   </component>
@@ -173,10 +186,66 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="100" y="111" width="1720" height="861" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1575407197025">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="100" y="111" width="1720" height="861" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1575407197025" />
+    <state x="771" y="236" width="374" height="641" key="#com.intellij.ide.util.MemberChooser" timestamp="1575403347217">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="771" y="236" width="374" height="641" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1575403347217" />
+    <state x="528" y="121" width="859" height="824" key="CommitChangelistDialog2" timestamp="1575408709434">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="528" y="121" width="859" height="824" key="CommitChangelistDialog2/0.27.1920.1053@0.27.1920.1053" timestamp="1575408709434" />
+    <state width="1874" height="275" key="GridCell.Tab.0.bottom" timestamp="1575408681331">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="275" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1575408681331" />
+    <state width="1874" height="275" key="GridCell.Tab.0.center" timestamp="1575408681331">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="275" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1575408681331" />
+    <state width="1874" height="275" key="GridCell.Tab.0.left" timestamp="1575408681331">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="275" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1575408681331" />
+    <state width="1874" height="275" key="GridCell.Tab.0.right" timestamp="1575408681331">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="275" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1575408681331" />
+    <state x="446" y="127" width="1024" height="860" key="SettingsEditor" timestamp="1575404748172">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="446" y="127" width="1024" height="860" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1575404748172" />
+    <state x="558" y="285" width="800" height="543" key="Vcs.Push.Dialog.v2" timestamp="1575408579718">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="558" y="285" width="800" height="543" key="Vcs.Push.Dialog.v2/0.27.1920.1053@0.27.1920.1053" timestamp="1575408579718" />
+    <state x="634" y="445" width="647" height="224" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1575404600550">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="634" y="445" width="647" height="224" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.27.1920.1053@0.27.1920.1053" timestamp="1575404600550" />
+    <state x="623" y="253" width="672" height="678" key="search.everywhere.popup" timestamp="1575408062650">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="623" y="253" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1575408062650" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Algorithms_and_Data_Structures$CLListTest_addLastTest2.ic" NAME="CLListTest.addLastTest2 Coverage Results" MODIFIED="1575406866965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>test.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Algorithms_and_Data_Structures$CLListTest.ic" NAME="CLListTest Coverage Results" MODIFIED="1575406871646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>test.*</FILTER>
+    </SUITE>
   </component>
 </project>
