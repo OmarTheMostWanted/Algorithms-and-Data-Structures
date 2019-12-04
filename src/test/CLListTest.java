@@ -14,7 +14,7 @@ public class CLListTest {
     @BeforeEach
     void setUp() {
         integerCLList = new CLList<Integer>();
-        stringCLList = new CLList<>();
+        stringCLList = new CLList<String>();
     }
 
     @AfterEach
@@ -129,6 +129,64 @@ public class CLListTest {
     }
 
 
+    @Test
+    void removeFirst() {
 
+        integerCLList.addFirst(1);
+        integerCLList.addLast(2);
+
+        Assertions.assertEquals(1, integerCLList.removeFirst());
+
+        Assertions.assertEquals(1, integerCLList.getSize());
+
+    }
+
+    @Test
+    void removeFirst1() {
+        Assertions.assertNull(integerCLList.removeFirst());
+    }
+
+    @Test
+    void removeFirst2() {
+        Assertions.assertNull(stringCLList.removeFirst());
+    }
+
+    @Test
+    void removeLast() {
+
+        integerCLList.addFirst(1);
+        integerCLList.addLast(2);
+
+        Assertions.assertEquals(2, integerCLList.removeLast());
+
+        Assertions.assertEquals(1, integerCLList.getFirst());
+
+        Assertions.assertEquals(1, integerCLList.getSize());
+    }
+
+
+    @Test
+    void removeLast1() {
+        Assertions.assertNull(stringCLList.removeLast());
+    }
+
+
+    @Test
+    void toStringTest() {
+        Assertions.assertEquals("[]", integerCLList.toString());
+        integerCLList.addFirst(1);
+        Assertions.assertEquals("[1]", integerCLList.toString());
+        integerCLList.addFirst(2);
+        Assertions.assertEquals("[2 1]", integerCLList.toString());
+
+    }
+
+    @Test
+    void equalsTest() {
+      //  Assertions.assertTrue(integerCLList.equals(integerCLList));
+        Assertions.assertFalse(integerCLList.equals(stringCLList));
+       // Assertions.assertFalse(integerCLList.equals(new Object()));
+
+    }
 
 }

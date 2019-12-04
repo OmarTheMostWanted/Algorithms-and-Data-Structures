@@ -1,7 +1,5 @@
 package main;
 
-import jdk.nashorn.api.tree.WithTree;
-import org.junit.jupiter.api.Test;
 
 public class CLList<T> {
 
@@ -151,7 +149,8 @@ public class CLList<T> {
             counter--;
         }
 
-        stringBuilder.deleteCharAt(stringBuilder.length() - 1);
+        if (size != 0)
+            stringBuilder.deleteCharAt(stringBuilder.length() - 1);
 
         stringBuilder.append(']');
 
