@@ -1,6 +1,6 @@
 package test;
 
-import main.CLList;
+import main.CLL;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -8,123 +8,123 @@ import org.junit.jupiter.api.Test;
 
 public class CLListTest {
 
-    private CLList<Integer> integerCLList;
-    private CLList<String> stringCLList;
+    private CLL<Integer> integerCLL;
+    private CLL<String> stringCLL;
 
     @BeforeEach
     void setUp() {
-        integerCLList = new CLList<Integer>();
-        stringCLList = new CLList<String>();
+        integerCLL = new CLL<Integer>();
+        stringCLL = new CLL<String>();
     }
 
     @AfterEach
     void dispose() {
-        integerCLList = null;
-        stringCLList = null;
+        integerCLL = null;
+        stringCLL = null;
     }
 
 
     @Test
     void constructor() {
-        Assertions.assertNotNull(integerCLList);
+        Assertions.assertNotNull(integerCLL);
     }
 
     @Test
     void constructor1() {
-        Assertions.assertEquals(0, integerCLList.getSize());
+        Assertions.assertEquals(0, integerCLL.getSize());
     }
 
     @Test
     void constructor2() {
-        Assertions.assertNull(integerCLList.getFirst());
+        Assertions.assertNull(integerCLL.getFirst());
     }
 
     @Test
     void addFistTest() {
-        integerCLList.addFirst(1);
-        Assertions.assertEquals(1, integerCLList.getFirst());
+        integerCLL.addFirst(1);
+        Assertions.assertEquals(1, integerCLL.getFirst());
     }
 
     @Test
     void addFistTest1() {
-        integerCLList.addFirst(1);
-        Assertions.assertEquals(1, integerCLList.getSize());
-        Assertions.assertEquals(1, integerCLList.getLast());
+        integerCLL.addFirst(1);
+        Assertions.assertEquals(1, integerCLL.getSize());
+        Assertions.assertEquals(1, integerCLL.getLast());
     }
 
     @Test
     void addFirstTest2() {
-        stringCLList.addFirst("test");
-        stringCLList.addFirst("1");
-        Assertions.assertEquals("test", stringCLList.getLast());
-        Assertions.assertEquals("1", stringCLList.getFirst());
-        Assertions.assertEquals(2, stringCLList.getSize());
+        stringCLL.addFirst("test");
+        stringCLL.addFirst("1");
+        Assertions.assertEquals("test", stringCLL.getLast());
+        Assertions.assertEquals("1", stringCLL.getFirst());
+        Assertions.assertEquals(2, stringCLL.getSize());
     }
 
     @Test
     void addLastTest() {
-        stringCLList.addLast("zero");
-        Assertions.assertEquals(1, stringCLList.getSize());
+        stringCLL.addLast("zero");
+        Assertions.assertEquals(1, stringCLL.getSize());
     }
 
     @Test
     void addLastTest1() {
 
         final String test = "zero";
-        stringCLList.addLast(test);
-        Assertions.assertEquals(test, stringCLList.getFirst());
-        Assertions.assertEquals(test, stringCLList.getLast());
+        stringCLL.addLast(test);
+        Assertions.assertEquals(test, stringCLL.getFirst());
+        Assertions.assertEquals(test, stringCLL.getLast());
     }
 
     @Test
     void addLastTest2() {
-        integerCLList.addLast(0);
-        integerCLList.addLast(1);
-        integerCLList.addFirst(2);
-        Assertions.assertEquals(3, integerCLList.getSize());
-        Assertions.assertEquals(1, integerCLList.getLast());
-        Assertions.assertEquals(2, integerCLList.getFirst());
+        integerCLL.addLast(0);
+        integerCLL.addLast(1);
+        integerCLL.addFirst(2);
+        Assertions.assertEquals(3, integerCLL.getSize());
+        Assertions.assertEquals(1, integerCLL.getLast());
+        Assertions.assertEquals(2, integerCLL.getFirst());
     }
 
     @Test
     void rotateTest() {
-        integerCLList.rotate();
-        Assertions.assertNull(integerCLList.getFirst());
+        integerCLL.rotate();
+        Assertions.assertNull(integerCLL.getFirst());
 
-        integerCLList.addFirst(1);
-        integerCLList.rotate();
+        integerCLL.addFirst(1);
+        integerCLL.rotate();
 
-        Assertions.assertEquals(1, integerCLList.getFirst());
-        Assertions.assertEquals(1, integerCLList.getLast());
+        Assertions.assertEquals(1, integerCLL.getFirst());
+        Assertions.assertEquals(1, integerCLL.getLast());
     }
 
     @Test
     void rotateTest1() {
-        integerCLList.addFirst(0);
-        integerCLList.addFirst(1);
+        integerCLL.addFirst(0);
+        integerCLL.addFirst(1);
 
-        Assertions.assertEquals(1, integerCLList.getFirst());
-        Assertions.assertEquals(0, integerCLList.getLast());
+        Assertions.assertEquals(1, integerCLL.getFirst());
+        Assertions.assertEquals(0, integerCLL.getLast());
 
-        integerCLList.rotate();
+        integerCLL.rotate();
 
-        Assertions.assertEquals(0, integerCLList.getFirst());
-        Assertions.assertEquals(1, integerCLList.getLast());
+        Assertions.assertEquals(0, integerCLL.getFirst());
+        Assertions.assertEquals(1, integerCLL.getLast());
     }
 
     @Test
     void rotateTest2() {
 
-        integerCLList.addLast(0);
-        integerCLList.addLast(1);
-        integerCLList.addLast(2);
-        integerCLList.addLast(3);
+        integerCLL.addLast(0);
+        integerCLL.addLast(1);
+        integerCLL.addLast(2);
+        integerCLL.addLast(3);
 
-        Assertions.assertEquals(0, integerCLList.getFirst());
+        Assertions.assertEquals(0, integerCLL.getFirst());
 
-        integerCLList.rotate();
-        Assertions.assertEquals(1, integerCLList.getFirst());
-        Assertions.assertEquals(0, integerCLList.getLast());
+        integerCLL.rotate();
+        Assertions.assertEquals(1, integerCLL.getFirst());
+        Assertions.assertEquals(0, integerCLL.getLast());
 
     }
 
@@ -132,59 +132,59 @@ public class CLListTest {
     @Test
     void removeFirst() {
 
-        integerCLList.addFirst(1);
-        integerCLList.addLast(2);
+        integerCLL.addFirst(1);
+        integerCLL.addLast(2);
 
-        Assertions.assertEquals(1, integerCLList.removeFirst());
+        Assertions.assertEquals(1, integerCLL.removeFirst());
 
-        Assertions.assertEquals(1, integerCLList.getSize());
+        Assertions.assertEquals(1, integerCLL.getSize());
 
     }
 
     @Test
     void removeFirst1() {
-        Assertions.assertNull(integerCLList.removeFirst());
+        Assertions.assertNull(integerCLL.removeFirst());
     }
 
     @Test
     void removeFirst2() {
-        Assertions.assertNull(stringCLList.removeFirst());
+        Assertions.assertNull(stringCLL.removeFirst());
     }
 
     @Test
     void removeLast() {
 
-        integerCLList.addFirst(1);
-        integerCLList.addLast(2);
+        integerCLL.addFirst(1);
+        integerCLL.addLast(2);
 
-        Assertions.assertEquals(2, integerCLList.removeLast());
+        Assertions.assertEquals(2, integerCLL.removeLast());
 
-        Assertions.assertEquals(1, integerCLList.getFirst());
+        Assertions.assertEquals(1, integerCLL.getFirst());
 
-        Assertions.assertEquals(1, integerCLList.getSize());
+        Assertions.assertEquals(1, integerCLL.getSize());
     }
 
 
     @Test
     void removeLast1() {
-        Assertions.assertNull(stringCLList.removeLast());
+        Assertions.assertNull(stringCLL.removeLast());
     }
 
 
     @Test
     void toStringTest() {
-        Assertions.assertEquals("[]", integerCLList.toString());
-        integerCLList.addFirst(1);
-        Assertions.assertEquals("[1]", integerCLList.toString());
-        integerCLList.addFirst(2);
-        Assertions.assertEquals("[2 1]", integerCLList.toString());
+        Assertions.assertEquals("[]", integerCLL.toString());
+        integerCLL.addFirst(1);
+        Assertions.assertEquals("[1]", integerCLL.toString());
+        integerCLL.addFirst(2);
+        Assertions.assertEquals("[2 1]", integerCLL.toString());
 
     }
 
     @Test
     void equalsTest() {
       //  Assertions.assertTrue(integerCLList.equals(integerCLList));
-        Assertions.assertFalse(integerCLList.equals(stringCLList));
+        Assertions.assertFalse(integerCLL.equals(stringCLL));
        // Assertions.assertFalse(integerCLList.equals(new Object()));
 
     }

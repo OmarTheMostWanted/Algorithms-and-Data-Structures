@@ -1,7 +1,7 @@
 package main;
 
 
-public class CLList<T> {
+public class CLL<T> {
 
     class Node<E> {
 
@@ -36,7 +36,7 @@ public class CLList<T> {
     private Node<T> tail;
     private int size;
 
-    public CLList() {
+    public CLL() {
         this.tail = new Node<T>(null, null);
         this.size = 0;
 
@@ -109,10 +109,10 @@ public class CLList<T> {
         if (this == that) {
             return true;
         }
-        if (that instanceof CLList) {
-            CLList<T> other = (CLList<T>) that;
+        if (that instanceof CLL) {
+            CLL<T> other = (CLL<T>) that;
 
-            if (this.getSize() == ((CLList) other).size) {
+            if (this.getSize() == ((CLL) other).size) {
                 Node<T> thisIt = this.tail.next;
                 Node<T> otherIt = other.tail.next;
                 int counter = this.size;
@@ -162,23 +162,23 @@ public class CLList<T> {
     }
 
     public static void main(String[] args) {
-        CLList<Integer> clList = new CLList<>();
-        clList.addLast(0);
-        clList.addLast(1);
-        clList.addLast(2);
-        clList.addLast(4);
+        CLL<Integer> CLL = new CLL<>();
+        CLL.addLast(0);
+        CLL.addLast(1);
+        CLL.addLast(2);
+        CLL.addLast(4);
 
-        clList.printListToConsole();
+        CLL.printListToConsole();
 
-        clList.rotate();
+        CLL.rotate();
 
-        clList.printListToConsole();
-        clList.rotate();
+        CLL.printListToConsole();
+        CLL.rotate();
 
-        clList.printListToConsole();
-        clList.rotate();
+        CLL.printListToConsole();
+        CLL.rotate();
 
-        clList.printListToConsole();
+        CLL.printListToConsole();
 
     }
 }
