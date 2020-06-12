@@ -1,5 +1,6 @@
 package main;
 
+import main.arrays.SortingArrays;
 import main.trees.BinaryyTree;
 
 import java.util.Arrays;
@@ -7,40 +8,49 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         int[] a = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+        int[] b = {3,2,1,4};
+
+        int[] c = {2,5,1,6,6,0,1,8,7,0,6,8,9,1,2,3};
+
 //        System.out.println(Arrays.toString(prefixSums(a)));
 //        System.out.println(linearSearch(a, 10));
 //        System.out.println(binarySearch(a, 10));
 //        System.out.println(binarySum(a));
 //        System.out.println(Arrays.toString(cumulativeSums(a)));
 
-        BinaryyTree<Character> A = new BinaryyTree<>('A');
-        A.setLeft(new BinaryyTree<>('B'));
-        A.setRight(new BinaryyTree<>('C'));
+        SortingArrays.insertionSort(c);
+        System.out.println(Arrays.toString(c));
 
-        A.getLeft().setLeft(new BinaryyTree<>('E'));
-        A.getLeft().setRight(new BinaryyTree<>('F'));
 
-        A.getRight().setLeft(new BinaryyTree<>('G'));
-        A.getRight().setRight(new BinaryyTree<>('H'));
-
-        A.getLeft().getRight().setLeft(new BinaryyTree<>('I'));
-        A.getLeft().getRight().setRight(new BinaryyTree<>('J'));
-
-//        System.out.println("preorder:");
-//        A.preorder();
+//        BinaryyTree<Character> A = new BinaryyTree<>('A');
+//        A.setLeft(new BinaryyTree<>('B'));
+//        A.setRight(new BinaryyTree<>('C'));
+//
+//        A.getLeft().setLeft(new BinaryyTree<>('E'));
+//        A.getLeft().setRight(new BinaryyTree<>('F'));
+//
+//        A.getRight().setLeft(new BinaryyTree<>('G'));
+//        A.getRight().setRight(new BinaryyTree<>('H'));
+//
+//        A.getLeft().getRight().setLeft(new BinaryyTree<>('I'));
+//        A.getLeft().getRight().setRight(new BinaryyTree<>('J'));
+//
+////        System.out.println("preorder:");
+////        A.preorder();
+////        System.out.println();
+//
+////        System.out.println("postorder:");
+////        A.postorder();
+////        System.out.println();
+//
+//        System.out.println("breadthfirst:");
+//        A.breadthfirst();
 //        System.out.println();
-
-//        System.out.println("postorder:");
-//        A.postorder();
+//
+//        System.out.println("inorder");
+//        A.inorder();
 //        System.out.println();
-
-        System.out.println("breadthfirst:");
-        A.breadthfirst();
-        System.out.println();
-
-        System.out.println("inorder");
-        A.inorder();
-        System.out.println();
 
     }
 
