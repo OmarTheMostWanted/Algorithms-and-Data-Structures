@@ -28,7 +28,7 @@ public interface Tree<E> extends Iterable<E> {
 
     Iterator<E> iterator();
 
-    Iterable<Position<E>> positions();
+    Iterable<Position<E>> positions();p[;[[]]]
 
     void visit(Position<E> p);
 
