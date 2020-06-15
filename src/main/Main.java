@@ -7,11 +7,29 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
+
+        int[] index = new int[100];
+
+        for (int i = 0; i < index.length; i++)
+            index[i] = i;
+        System.out.println(Arrays.toString(index));
+
         int[] a = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
-        int[] b = {3,2,1,4};
+        int[] b = {3, 2, 1, 4};
 
-        int[] c = {2,5,1,6,6,0,1,8,7,0,6,8,9,1,2,3};
+        int[] c = {2, 5, 1, 6, 6, 0, 1, 8, 7, 0, 6, 8, 9, 1, 2, 3};
+
+        int[] d = {2, 5, 1, 6, 0, 1};
+
+        int[] e = new int[10];
+        int k = 10;
+
+        for (int i = 0; i < e.length; i++) {
+            e[i] = k;
+            k--;
+        }
+
 
 //        System.out.println(Arrays.toString(prefixSums(a)));
 //        System.out.println(linearSearch(a, 10));
@@ -19,8 +37,14 @@ public class Main {
 //        System.out.println(binarySum(a));
 //        System.out.println(Arrays.toString(cumulativeSums(a)));
 
-        SortingArrays.insertionSort(c);
-        System.out.println(Arrays.toString(c));
+        int[] p = e;
+        System.out.println(Arrays.toString(p));
+        SortingArrays.quickSort(p);
+        System.out.println(Arrays.toString(p));
+
+//        int pivot = SortingArrays.partition(p , 1 , p.length -1 );
+//        System.out.println(Arrays.toString(p));
+//        System.out.println("pivot:index: " + pivot + " value: " + p[pivot]);
 
 
 //        BinaryyTree<Character> A = new BinaryyTree<>('A');
