@@ -1,8 +1,8 @@
-package main;
+package main.week4;
 
 
 
-class ArrayStack {
+public class ArrayStack {
     private Object[] elements;
     private int size;
     private int capacity;
@@ -125,6 +125,4 @@ class ArrayStack {
     }
 }
 
-class EmptyStackException extends Exception {
-}
 
