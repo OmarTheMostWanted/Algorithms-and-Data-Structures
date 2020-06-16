@@ -1,7 +1,6 @@
 package main.week4;
 
 
-
 public class ArrayStack {
     private Object[] elements;
     private int size;
@@ -80,12 +79,12 @@ public class ArrayStack {
         if (isEmpty())
             throw new EmptyStackException();
 
-        if (size * 4 == capacity) {
-            Object newer[] = new Object[capacity / 4];
-            for (int i = 0; i < this.elements.length; i++) {
+        if (size * 4 <= capacity) {
+            Object newer[] = new Object[capacity / 2];
+            for (int i = 0; i < newer.length; i++) {
                 newer[i] = this.elements[i];
             }
-            this.capacity /= 4;
+            this.capacity /= 2;
             this.elements = newer;
         }
 
@@ -104,12 +103,14 @@ public class ArrayStack {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("<ArrayStack[");
 
-        for (Object o : this.elements) {
-            stringBuilder.append(o.toString());
+        for (int i = 0; i < size; i++) {
+            stringBuilder.append(this.elements[i].toString());
             stringBuilder.append(',');
         }
 
-        stringBuilder.deleteCharAt(stringBuilder.length() - 1);
+        if (this.size != 0) {
+            stringBuilder.deleteCharAt(stringBuilder.length() - 1);
+        }
 
         stringBuilder.append("]>(Size=");
         stringBuilder.append(this.size);

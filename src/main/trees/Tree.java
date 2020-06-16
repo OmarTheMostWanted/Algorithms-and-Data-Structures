@@ -44,16 +44,16 @@ public interface Tree<E> extends Iterable<E> {
     /**
      * Node is visited before its children.
      **/
-    void preorder(Position<E> p);
+//    void preorder(Position<E> p);
 
     /**
      * Node is visited after its children.
      **/
-    void postorder(Position<E> p);
+//    void postorder(Position<E> p);
 
 
     /**
      * Visits nodes per level (depth).
      **/
-    void breadthfirst(Position<E> p);
+//    void breadthfirst(Position<E> p);
 }

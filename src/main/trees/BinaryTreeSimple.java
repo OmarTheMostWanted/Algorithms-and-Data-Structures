@@ -3,13 +3,13 @@ package main.trees;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class BinaryyTree<T> {
+public class BinaryTreeSimple<T> {
 
     private T element;
-    private BinaryyTree<T> left;
-    private BinaryyTree<T> right;
+    private BinaryTreeSimple<T> left;
+    private BinaryTreeSimple<T> right;
 
-    public BinaryyTree(T element) {
+    public BinaryTreeSimple(T element) {
         this.element = element;
         this.left = null;
         this.right = null;
@@ -23,19 +23,19 @@ public class BinaryyTree<T> {
         this.element = element;
     }
 
-    public BinaryyTree<T> getLeft() {
+    public BinaryTreeSimple<T> getLeft() {
         return left;
     }
 
-    public void setLeft(BinaryyTree<T> left) {
+    public void setLeft(BinaryTreeSimple<T> left) {
         this.left = left;
     }
 
-    public BinaryyTree<T> getRight() {
+    public BinaryTreeSimple<T> getRight() {
         return right;
     }
 
-    public void setRight(BinaryyTree<T> right) {
+    public void setRight(BinaryTreeSimple<T> right) {
         this.right = right;
     }
 
@@ -70,10 +70,10 @@ public class BinaryyTree<T> {
      * Visits nodes per level (depth).
      **/
     public void breadthfirst() {
-        Queue<BinaryyTree<T>> q = new LinkedList<BinaryyTree<T>>();
+        Queue<BinaryTreeSimple<T>> q = new LinkedList<BinaryTreeSimple<T>>();
         q.add(this);
         while (!q.isEmpty()) {
-            BinaryyTree<T> p = q.remove();
+            BinaryTreeSimple<T> p = q.remove();
             System.out.println(p.element.toString());
             if (p.left != null) {
                 q.add(p.left);
@@ -89,7 +89,7 @@ public class BinaryyTree<T> {
     }
 
     /** Node is visited after left child and before right child. **/
-    public void inorder(BinaryyTree<T> p) {
+    public void inorder(BinaryTreeSimple<T> p) {
         if(p.getLeft() != null) inorder(p.getLeft());
         System.out.println(p.element.toString());
         if(p.getRight() != null) inorder(p.getRight());
