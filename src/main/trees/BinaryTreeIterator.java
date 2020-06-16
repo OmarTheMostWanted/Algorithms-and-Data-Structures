@@ -92,6 +92,194 @@ class BinaryTreeIterator<V> implements Iterator<V> {
 }
 
 
+//import java.util.*;
+//
+///**
+// * Iterates lazily over a binary tree in a depth-first manner. For instance a tree
+// * with 8 as it's root and 4 and 10 as it's children should be iterated as: 8 ->
+// * 4 -> 10.
+// */
+//class BinaryTreeIterator<V> implements Iterator<V> {
+//    /**
+//     * Constructor.
+//     * Should reset on a new tree.
+//     *
+//     * @param tree
+//     * takes the tree
+//     */
+//    Stack<Position<V>> s;
+//    BTree<V> tr;
+//    public BinaryTreeIterator(BTree<V> tree) {
+//        s = new Stack<>();
+//        s.push(tree.getRoot());
+//        tr = tree;
+//// System.out.println(s.peek().getValue());
+//    }
+//
+//    /**
+//     * @return True if there is a next element in the iterator, else False
+//     */
+//    @Override
+//    public boolean hasNext() {
+//
+//        if(s.isEmpty()) return false;
+//        if(s.peek()== null) return false;
+//        return true;
+//    }
+//
+//    /**
+//     * Get the next element of the iterator and shift
+//     * iterator by one.
+//     *
+//     * @return current element value
+//     * @post iterator is moved to next element
+//     */
+//    @Override
+//    public V next() {
+//
+//        if(s.isEmpty()) return null;
+//
+//        Position<V> dummy = s.peek();
+//        s.pop();
+//        if(dummy == null ) return null;
+//// System.out.println(dummy.getValue());
+//        try
+//        {
+//            if(tr.hasRight(dummy))
+//            {
+//                s.push(tr.getRight(dummy));
+//
+//            }
+//// System.out.println(tr.getRight(dummy).getValue());
+//        }
+//
+//        catch (InvalidPositionException e){}
+//
+//        try{
+//            if(tr.hasLeft(dummy)){
+//                s.push(tr.getLeft(dummy));
+//
+//            }
+//// System.out.println(tr.getLeft(dummy).getValue());
+//        }
+//
+//        catch (InvalidPositionException e){}
+//
+//
+//
+//
+//        return dummy.getValue();
+//
+//    }
+//
+//    /**
+//     * Skip a single element of the iterator.
+//     *
+//     * @post iterator is moved to next element.
+//     */
+//    @Override
+//    public void remove() {
+//
+//        if(s.isEmpty()) return;
+//
+//        Position<V> dummy = s.pop();
+//
+//        try{
+//            if(tr.hasRight(dummy))
+//            {
+//                s.push(tr.getRight(dummy));}}
+//
+//        catch (InvalidPositionException e){}
+//
+//        try{
+//            if(tr.hasLeft(dummy))
+//            {
+//                s.push(tr.getLeft(dummy));
+//            }
+//
+//        }
+//
+//        catch (InvalidPositionException e){}
+//
+//    }
+//}
+
+///**
+// * DO NOT MODIFY
+// */
+//interface Position<V> {
+//    /**
+//     * @return the key of this position.
+//     */
+//    public int getKey();
+//
+//    /**
+//     * @return the value of the position.
+//     */
+//    public V getValue();
+//}
+//
+//interface BTree<V> {
+//    /**
+//     * @return the root of the tree
+//     */
+//    public Position<V> getRoot();
+//
+//    /**
+//     * Get the left child of a position.
+//     *
+//     * @param v
+//     * the position to get the child of.
+//     * @return the child of the position iff hasLeft(v) is true.
+//     * @throws InvalidPositionException
+//     * else
+//     */
+//    public Position<V> getLeft(Position<V> v) throws InvalidPositionException;
+//
+//    /**
+//     * Get the right child of a position.
+//     *
+//     * @param v
+//     * the position to get the child of.
+//     * @return the child of the position iff hasRight(v) is true.
+//     * @throws InvalidPositionException
+//     * else
+//     */
+//    public Position<V> getRight(Position<V> v) throws InvalidPositionException;
+//
+//    /**
+//     * Check if a position has a left child.
+//     *
+//     * @param v
+//     * position to check.
+//     * @return true iff v has a left child.
+//     * @throws InvalidPositionException
+//     * if v is not valid (e.g. null)
+//     */
+//    public boolean hasLeft(Position<V> v) throws InvalidPositionException;
+//
+//    /**
+//     * Check if a position has a right child.
+//     *
+//     * @param v
+//     * position to check.
+//     * @return true iff v has a right child.
+//     * @throws InvalidPositionException
+//     * if v is not valid (e.g. null)
+//     */
+//    public boolean hasRight(Position<V> v) throws InvalidPositionException;
+//
+//    /**
+//     * Adds a new entry to the tree.
+//     *
+//     * @param key
+//     * to use.
+//     * @param value
+//     * to add.
+//     */
+//    public void add(int key, V value);
+//}
+
 //class BinaryTreeIterator<V> implements Iterator<V> {
 //    private final BTree<V> tree;
 //    private final Queue<Position<V>> queue;
