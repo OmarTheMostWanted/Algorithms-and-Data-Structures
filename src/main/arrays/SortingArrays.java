@@ -100,7 +100,7 @@ public class SortingArrays {
 
     //quick sort worst space complexity is n^2 and best is log(n)
     public static void quickSort(int[] target) {
-        quickSortFromRandomPivot(target, 0, target.length - 1);
+        quickSortFromMiddle(target, 0, target.length - 1);
     }
 
     private static void quickSortFromRandomPivot(int[] target, int low, int high) {
@@ -183,7 +183,7 @@ public class SortingArrays {
 
     }
 
-    //sort from left
+    //sort from left // does not work
     private static void quickSortFromLeft(int[] target, int low, int high) {
 
         if (low >= high) return;
@@ -218,7 +218,6 @@ public class SortingArrays {
         quickSortFromLeft(target, left + 1, high);
 
     }
-
 
     //sort from right
     private static void quickSort(int[] target, int low, int high) {
@@ -307,6 +306,24 @@ public class SortingArrays {
         target[low] = temp;
 
         return j;
+    }
+
+    public  static void csort(int [] array , int k){
+        int temp[] = new int[k + 1];
+
+        for (int e : array){
+            temp[e]++;
+        }
+
+        int ndx = 0;
+        for(int i = 0 ; i < temp.length ; i++){
+            while (temp[i] > 0){
+                array[ndx] = i;
+                ndx++;
+                temp[i]--;
+            }
+        }
+
     }
 
 }

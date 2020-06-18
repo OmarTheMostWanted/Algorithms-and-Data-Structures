@@ -19,15 +19,15 @@ public class Main {
         for (int i = 0; i < index.length; i++)
             index[i] = i;
 //        System.out.println(Arrays.toString(index));
-//
+
         int[] a = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-//
-        int[] b = {3, 2, 1, 4};
-//
+
+        int[] b = {3, 2, 1, 4 , 2  , 1};
+
         int[] c = {2, 5, 1, 6, 6, 0, 1, 8, 7, 0, 6, 8, 9, 1, 2, 3};
-//
+
         int[] d = {2, 5, 1, 6, 0, 1};
-//
+
         int[] e = new int[10];
         int k = 10;
 
@@ -36,11 +36,22 @@ public class Main {
             k--;
         }
 
+        int[] f = new int[10000];
 
-        int[] p = c;
-//        System.out.println(Arrays.toString(p));
-        SortingArrays.quickSort(p);
+        for (int i = 0; i < f.length; i++) {
+            f[i] = (int) (Math.random() * 10000);
+        }
+
+        int[] p = b;
+
+        SortingArrays.csort(p , 4);
         System.out.println(Arrays.toString(p));
+
+//        double start = System.currentTimeMillis();
+//        SortingArrays.quickSort(p);
+//        double end = System.currentTimeMillis();
+//        System.out.println(end - start);
+//        System.out.println(Arrays.toString(p));
 
 //        int pivot = SortingArrays.partition(p , 1 , p.length -1 );
 //        System.out.println(Arrays.toString(p));
