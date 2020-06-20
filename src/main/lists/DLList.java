@@ -1,4 +1,4 @@
-package main;
+package main.lists;
 
 //week 2 ex 4
 

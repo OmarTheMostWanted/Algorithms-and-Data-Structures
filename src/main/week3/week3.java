@@ -1,4 +1,4 @@
-package main;
+package main.week3;
 
 import java.util.*;
 

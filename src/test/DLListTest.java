@@ -1,9 +1,7 @@
 package test;
 
-import main.DLList;
+import main.lists.DLList;
 import org.junit.jupiter.api.*;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 
 class DLListTest {
