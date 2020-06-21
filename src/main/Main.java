@@ -9,6 +9,8 @@ import java.util.Iterator;
 public class Main {
     public static void main(String[] args) {
 
+        System.out.println(Integer.toBinaryString(12 >> 1));
+
 
 //        ArrayList t = new ArrayList();
 //
