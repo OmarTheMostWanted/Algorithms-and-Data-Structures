@@ -1,4 +1,4 @@
-package Week2;
+package main.Week2;
 
 class DLList {
     // Each object in DLList has one field head, which points to the starting Node of DLList.
