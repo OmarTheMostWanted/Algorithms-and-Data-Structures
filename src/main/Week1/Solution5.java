@@ -1,6 +1,6 @@
-package Week1;
+package main.Week1;
 
-class Solution5 {
+public class Solution5 {
     public static int multiply(int num1, int num2) {
         if (num2 == 0) {
             return 0;
