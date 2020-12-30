@@ -1,4 +1,4 @@
-package Week3;
+package main.Week3;
 
 /**
  * DO NOT MODIFY

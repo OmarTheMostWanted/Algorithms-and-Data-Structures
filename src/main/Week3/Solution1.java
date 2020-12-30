@@ -1,6 +1,6 @@
-package Week3;
+package main.Week3;
 
-import java.util.*;
+import java.util.NoSuchElementException;
 
 /**
  * Interface for a Queue.

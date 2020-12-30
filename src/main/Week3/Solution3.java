@@ -1,6 +1,9 @@
-package Week3;
+package main.Week3;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.NoSuchElementException;
 
 /**
  * DO NOT MODIFY
