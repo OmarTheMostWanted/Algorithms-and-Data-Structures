@@ -338,13 +338,6 @@ class CLList<T> implements PositionList<T> {
   }
 }
 
-class InvalidPositionException extends Exception {
-  private static final long serialVersionUID = -8010862139713793777L;
-
-  public InvalidPositionException() {
-    super("Invalid position");
-  }
-}
 
 class EmptyDequeException extends Exception {
   private static final long serialVersionUID = -8010862139713793778L;
