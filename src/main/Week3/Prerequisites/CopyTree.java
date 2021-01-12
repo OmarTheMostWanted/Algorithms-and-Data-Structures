@@ -1,4 +1,4 @@
-package main.Week3;
+package main.Week3.Prerequisites;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -64,7 +64,7 @@ public class CopyTree {
         /**
          * Sets the value of this tree.
          *
-         * @param The new value of this tree.
+         * @param value The new value of this tree.
          */
         public int setValue(int value) {
             return this.value = value;

@@ -1,5 +1,14 @@
 package main.code.trees;
 
+
+/**
+ * Each Node of the tree Contains a reference to it's Parent and sequence of children nodes.
+ * <p>
+ * Space Complexity: O(n) where n is the size of the tree
+ * Time complexity for insertion/removal: O(1)
+ *
+ * @param <T>
+ */
 public class LinkedTree<T> {
 
     private Node<T> root;
@@ -44,21 +53,23 @@ public class LinkedTree<T> {
 
 
     private class Node<T> {
-        int key;
-        T value;
-        Node<T> left;
-        Node<T> right;
 
-        public Node(int key, T value, Node<T> left, Node<T> right) {
-            this.key = key;
-            this.value = value;
-            this.left = left;
-            this.right = right;
-        }
+        private int key;
+        private T value;
+
+        private Node<T> parent, left, right;
 
         public Node(int key, T value) {
             this.key = key;
             this.value = value;
+        }
+
+        public Node(int key, T value, Node<T> parent, Node<T> left, Node<T> right) {
+            this.key = key;
+            this.value = value;
+            this.parent = parent;
+            this.left = left;
+            this.right = right;
         }
 
         public int getKey() {
@@ -77,6 +88,14 @@ public class LinkedTree<T> {
             this.value = value;
         }
 
+        public Node<T> getParent() {
+            return parent;
+        }
+
+        public void setParent(Node<T> parent) {
+            this.parent = parent;
+        }
+
         public Node<T> getLeft() {
             return left;
         }
@@ -92,7 +111,6 @@ public class LinkedTree<T> {
         public void setRight(Node<T> right) {
             this.right = right;
         }
-
     }
 
 }

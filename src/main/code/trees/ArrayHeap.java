@@ -2,6 +2,20 @@ package main.code.trees;
 
 import java.util.ArrayList;
 
+
+/**
+ * Nodes are stored in an array.
+ * <p>
+ * Nodes v is stored at index f(v):
+ * - f(v) = 0          > if v is the root
+ * - f(v) = 2*f(p) + 1 > if v is the left child of p
+ * - f(v) = 2*f(p) + 2 > if v is the right child of p
+ * <p>
+ * Space complexity: O(2^height) because there would be many empty positions in the array depending on the shape if the tree.
+ * Many update operations require changing the entire array. Only efficient for particular shape of tree (Heaps)
+ *
+ * @param <T>
+ */
 public class ArrayHeap<T> {
 
     int size;

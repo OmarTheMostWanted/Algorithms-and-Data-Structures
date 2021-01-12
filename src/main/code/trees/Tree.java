@@ -21,16 +21,16 @@ public class Tree<T> {
     }
 
 
+    public Tree<T> copy() {
+        return copy(this);
+    }
+
     /**
      * Creates a hard copy of the n-ary tree.
      *
      * @param t - the tree to create a copy of
      * @return a new tree in which every node contains the values of the nodes at the corresponding positions in t
      */
-    public Tree<T> copy() {
-        return copy(this);
-    }
-
     private Tree<T> copy(Tree<T> t) {
         if (t == null) return null;
         Tree<T> res = new Tree<>(t.value);

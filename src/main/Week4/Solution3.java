@@ -1,6 +1,7 @@
-package Week4;
+package main.Week4;
 
-import java.util.*;
+import java.util.Iterator;
+import java.util.LinkedList;
 
 /**
  * DO NOT MODIFY
@@ -312,7 +313,7 @@ class BinaryTree<V> implements BTree<V> {
    * Checks if the position is valid
    *
    * @param v position to check
-   * @return v iff v instanceof BTNode.
+   * @return v iff v instanceof BTNode.java.
    * @throws InvalidPositionException else
    */
   private BTNode<V> checkPosition(Position<V> v) throws InvalidPositionException {

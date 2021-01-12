@@ -1,4 +1,4 @@
-package main.Week3;
+package main.Week3.Prerequisites;
 
 import java.util.Iterator;
 import java.util.List;

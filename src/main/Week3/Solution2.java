@@ -1,5 +1,8 @@
 package main.Week3;
 
+import main.Week3.MainMatter.LazyDepthFirsttIterator.InvalidPositionException;
+import main.Week3.MainMatter.LazyDepthFirsttIterator.Position;
+
 /**
  * DO NOT MODIFY
  * Interface for the double ended queue.
@@ -153,16 +156,6 @@ interface PositionList<T> {
    * @throws InvalidPositionException iff p is invalid.
    */
   public T set(Position<T> p, T o) throws InvalidPositionException;
-}
-
-/**
- * DO NOT MODIFY
- * Interface that represents a node in the list.
- *
- * @param <T> Type of element to hold
- */
-interface Position<T> {
-  T getElement();
 }
 
 /**
