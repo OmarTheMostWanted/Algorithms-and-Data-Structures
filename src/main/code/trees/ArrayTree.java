@@ -1,6 +1,9 @@
 package main.code.trees;
 
+import main.code.Book.Ch9PriorityQueues.DefaultComparator;
+
 import java.util.ArrayList;
+import java.util.Comparator;
 
 
 /**
@@ -16,12 +19,22 @@ import java.util.ArrayList;
  *
  * @param <T>
  */
-public class ArrayHeap<T> {
+public class ArrayTree<T> {
 
     int size;
     private ArrayList<Entry<T>> entries;
 
-    public ArrayHeap() {
+    //to compare elements T
+    private Comparator<T> comparator;
+
+    public ArrayTree() {
+        entries = new ArrayList<>();
+        size = 0;
+        comparator = new DefaultComparator<T>();
+    }
+
+    public ArrayTree(Comparator<T> c){
+        comparator = c;
         entries = new ArrayList<>();
         size = 0;
     }
