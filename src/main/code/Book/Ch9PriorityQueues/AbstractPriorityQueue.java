@@ -1,5 +1,7 @@
 package main.code.Book.Ch9PriorityQueues;
 
+import main.code.Book.Ch7PositionalList.PositionalList;
+
 import java.util.Comparator;
 
 /**
@@ -44,6 +46,21 @@ public abstract class AbstractPriorityQueue<K, V> implements PriorityQueue<K, V>
             return (comp.compare(key, key) == 0); // see if key can be compared to itself
         } catch (ClassCastException e) {
             throw new IllegalArgumentException("Incompatible key");
+        }
+    }
+
+    /**
+     * Sorts sequence S, using initially empty priority queue P to produce the order.
+     */
+    public static <E> void pqSort(PositionalList<E> S, PriorityQueue<E, ?> P) {
+        int n = S.size();
+        for (int j = 0; j < n; j++) {
+            E element = S.remove(S.first());
+            P.insert(element, null); // element is key; null value
+        }
+        for (int j = 0; j < n; j++) {
+            E element = P.removeMin().getKey();
+            S.addLast(element); // the smallest key in P is next placed in S
         }
     }
 

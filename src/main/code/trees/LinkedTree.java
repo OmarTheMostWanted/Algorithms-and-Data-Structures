@@ -25,13 +25,23 @@ public class LinkedTree<T> {
 
 
     //take log2(n) rightmost bits
-    public int getPathToLastNode() {
-        return (int) (size - Math.pow(2, Math.ceil(Math.log(size) / Math.log(2))));
+    public String getPathToLastNode() {
+        int res = ((int) (size - Math.pow(2, Math.ceil(Math.log(size) / Math.log(2)))));
+
+        String path = Integer.toBinaryString(res);
+
+        StringBuilder stringBuilder = new StringBuilder();
+
+        for (int i = path.length() - 1; i >= path.length() - height(); i--) {
+            stringBuilder.append(path.charAt(i));
+        }
+
+        return stringBuilder.toString();
     }
 
     //take log2(n+1) rightmost bits
-    public int getPathToNewNode() {
-        return (int) (size + 1 - Math.pow(2, Math.ceil(Math.log(size + 1) / Math.log(2))));
+    public String getPathToNewNode() {
+        return Integer.toBinaryString((int) (size + 1 - Math.pow(2, Math.ceil(Math.log(size + 1) / Math.log(2)))));
     }
 
 
