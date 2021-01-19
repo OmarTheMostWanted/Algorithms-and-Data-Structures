@@ -1,4 +1,4 @@
-package main.Week3;
+package main.Week3.Old;
 
 import main.Week3.MainMatter.LazyDepthFirsttIterator.InvalidPositionException;
 import main.Week3.MainMatter.LazyDepthFirsttIterator.Position;
