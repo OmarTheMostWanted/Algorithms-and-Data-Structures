@@ -23,7 +23,7 @@ class Solution {
         }
         ArrayList<Integer> res = new ArrayList<>();
 
-        for (int i = 0; i <= s; i++) {
+        for (int i = 0; i < s; i++) {
             res.add(queue.removeMax());
         }
         return res;
@@ -40,20 +40,17 @@ class SolutionPQ extends LibraryPQ {
      */
     @Override
     public void upHeap(int i) {
-        int p = i;
-
         int parent;
-        while (p >= 0) {
-
-            parent = (p - 1) / 2;
-
-            if (parent >= 0 && this.getInHeap(parent) <= getInHeap(i)) {
-                swap(parent, i);
-
-                p = parent;
-            } else break;
-
+        while (i > 0) {
+            parent = (i - 1) / 2;
+            if (parent >= 0) {
+                int element = this.getInHeap(i);
+                int parentE = this.getInHeap(parent);
+                if (parentE < element) {
+                    swap(parent, i);
+                    i = parent;
+                } else break;
+            }
         }
-
     }
 }
