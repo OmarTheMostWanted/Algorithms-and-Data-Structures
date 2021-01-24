@@ -1,4 +1,4 @@
-package Week7;
+package main.Week7.Old;
 
 public class Solution1 {
     /**
