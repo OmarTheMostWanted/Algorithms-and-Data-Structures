@@ -1,38 +1,70 @@
-package EndtermB;
+package main.EndtermB;
 
 import java.util.*;
 
 public class Solution2 {
+
     /**
      * Counts the number of vertices in the same connected component as v in graph g.
-     * This is done using breadth first search.
-     *
+     * This is done using depth first search.
+     * <p>
      * Returns 0 if the graph or vertex is null
      *
-     * @param g
-     *     The graph to count vertices in.
-     * @param v
-     *     The vertex to start counting at.
+     * @param g The graph to count vertices in.
+     * @param v The vertex to start counting at.
      * @return the number of vertices in the same connected component.
      */
     public static int countVertices(Graph g, Graph.Vertex v) {
-        if (g == null || v == null) return 0;
-        Set<Graph.Vertex> colored = new HashSet<>();
-        Queue<Graph.Vertex> queue = new LinkedList<>();
-        queue.add(v);
-        colored.add(v);
 
-        while (!queue.isEmpty()) {
-            for (Graph.Vertex n : g.getNeighbours(queue.remove())) {
-                if (!colored.contains(n)) {
-                    colored.add(n);
-                    queue.add(n);
-                }
+        if (g == null || v == null) return 0;
+        return helper(g, v, new HashSet<>());
+
+    }
+
+    private static int helper(Graph g, Graph.Vertex v, Set<Graph.Vertex> visited) {
+        visited.add(v);
+
+        int count = 1;
+
+        for (Graph.Vertex next : g.getNeighbours(v)) {
+            if (!visited.contains(next)) {
+                count = count + helper(g, next, visited);
             }
         }
-
-        return colored.size();
+        return count;
     }
+
+
+//    /**
+//     * Counts the number of vertices in the same connected component as v in graph g.
+//     * This is done using breadth first search.
+//     *
+//     * Returns 0 if the graph or vertex is null
+//     *
+//     * @param g
+//     *     The graph to count vertices in.
+//     * @param v
+//     *     The vertex to start counting at.
+//     * @return the number of vertices in the same connected component.
+//     */
+//    public static int countVertices(Graph g, Graph.Vertex v) {
+//        if (g == null || v == null) return 0;
+//        Set<Graph.Vertex> colored = new HashSet<>();
+//        Queue<Graph.Vertex> queue = new LinkedList<>();
+//        queue.add(v);
+//        colored.add(v);
+//
+//        while (!queue.isEmpty()) {
+//            for (Graph.Vertex n : g.getNeighbours(queue.remove())) {
+//                if (!colored.contains(n)) {
+//                    colored.add(n);
+//                    queue.add(n);
+//                }
+//            }
+//        }
+//
+//        return colored.size();
+//    }
 }
 
 /**

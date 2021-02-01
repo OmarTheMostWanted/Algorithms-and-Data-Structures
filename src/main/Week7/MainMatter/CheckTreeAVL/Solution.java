@@ -16,6 +16,7 @@ class Solution {
 
     private static boolean isTreeAVL(BinaryTree tree, int min, int max) {
         if (tree == null) return true;
+
         if (tree.getKey() <= min || tree.getKey() >= max) return false; //check BST
         if (Math.abs(height(tree.getLeft()) - height(tree.getRight())) > 1) { // check height balance
             return false;
